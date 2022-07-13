@@ -1,0 +1,14 @@
+<h2>{{ title }}</h2>
+
+<hr>
+
+<section id="form">
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" name="description" cols="30" rows="5" [(ngModel)]="task.description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3 me-2">Save</button>
+    <button type="button" class="btn btn-secondary mt-3" [routerLink]="['']">Cancel</button>
+  </form>
+</section>
